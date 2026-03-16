@@ -12,7 +12,13 @@ const tenses=[
 
 const verbsData = verbs
 
-const tenseList=document.getElementById("tenseList")
+const tenseList = document.getElementById("tenseList");
+
+if(tenseList){
+tenses.forEach(t=>{
+tenseList.innerHTML += `<label><input type="checkbox" class="tense" value="${t}" checked> ${t}</label><br>`
+});
+}
 
 tenses.forEach(t=>{
 tenseList.innerHTML+=`<label><input type="checkbox" class="tense" value="${t}" checked> ${t}</label><br>`
